@@ -1,0 +1,16 @@
+# Output reports
+reports/
+!/reports/.gitkeep
+
+# Swap files
+*~
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python caches (future)
+__pycache__/
+*.pyc
