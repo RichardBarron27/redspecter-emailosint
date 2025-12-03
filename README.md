@@ -1,4 +1,6 @@
-# Red Specter Email OSINT (redspecter-emailosint)
+# 📧 Red Specter Email OSINT
+> Part of the **Red Specter** ethical cybersecurity tool suite: Offensive Framework • ScriptMap • Email OSINT
+
 
 **Passive, safe, domain-based email discovery tool for ethical security analysis.**  
 Version: **v0.1 (skeleton)**  
@@ -92,4 +94,20 @@ License
 
 Released under the MIT License.
 
+
+
+---
+
+### 🔗 Explore the Red Specter tool suite
+
+- 🗺 **ScriptMap** – Map, group, and document your security/automation scripts in seconds.  
+  https://github.com/RichardBarron27/redspecter-scriptmap
+
+- 🧨 **Red Specter Offensive Framework** – Modular bash framework for recon, web enum, vuln scanning, and more (Kali-friendly).  
+  https://github.com/RichardBarron27/red-specter-offensive-framework
+
+- 📧 **Red Specter Email OSINT** – Email-focused OSINT helper for investigators and defenders.  
+  https://github.com/RichardBarron27/redspecter-emailosint
+
+Follow the Red Specter project for more ethical cybersecurity tools and playbooks.
 
