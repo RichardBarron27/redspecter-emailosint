@@ -119,3 +119,11 @@ Released under the MIT License.
 
 Follow the Red Specter project for more ethical cybersecurity tools and playbooks.
 
+## ❤️ Support Red Specter
+
+If these tools help you, you can support future development:
+
+- ☕ Buy me a coffee: https://www.buymeacoffee.com/redspecter  
+- 💼 PayPal: https://paypal.me/richardbarron1747  
+
+Your support helps me keep improving Red Specter and building new tools. Thank you!
