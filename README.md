@@ -1,4 +1,10 @@
 # 📧 Red Specter Email OSINT
+[![Stars](https://img.shields.io/github/stars/RichardBarron27/redspecter-emailosint?style=flat&logo=github)](https://github.com/RichardBarron27/redspecter-emailosint/stargazers)
+![Last Commit](https://img.shields.io/github/last-commit/RichardBarron27/redspecter-emailosint)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Kali%20-purple)
+![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)
+
 > Part of the **Red Specter** ethical cybersecurity tool suite: Offensive Framework • ScriptMap • Email OSINT
 
 
