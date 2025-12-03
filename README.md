@@ -4,6 +4,8 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Kali%20-purple)
 ![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/github/license/RichardBarron27/redspecter-emailosint)
+
 
 > Part of the **Red Specter** ethical cybersecurity tool suite: Offensive Framework • ScriptMap • Email OSINT
 
