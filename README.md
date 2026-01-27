@@ -1,135 +1,114 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/RichardBarron27/red-specter-offensive-framework/main/assets/red-specter-logo.png" alt="Red Specter Logo" width="200">
-</p>
+# Red Specter Email OSINT
 
-<br>
+**Version 0.2.0**
 
-# 📧 Red Specter Email OSINT
-[![Stars](https://img.shields.io/github/stars/RichardBarron27/redspecter-emailosint?style=flat&logo=github)](https://github.com/RichardBarron27/redspecter-emailosint/stargazers)
-![Last Commit](https://img.shields.io/github/last-commit/RichardBarron27/redspecter-emailosint)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
-![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Kali%20-purple)
-![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/github/license/RichardBarron27/redspecter-emailosint)
-
-
-> Part of the **Red Specter** ethical cybersecurity tool suite: Offensive Framework • ScriptMap • Email OSINT
-
-
-**Passive, safe, domain-based email discovery tool for ethical security analysis.**  
-Version: **v0.1 (skeleton)**  
-Author: **Richard B (Red Specter)**
-
----
+Passive, domain-based email intelligence tool for ethical reconnaissance and defensive security analysis.
 
 ## Overview
 
-`redspecter-emailosint` is a standalone OSINT tool designed to:
+Red Specter Email OSINT is a comprehensive toolkit for authorized security assessments and infrastructure analysis. It provides DNS enumeration, email validation, certificate transparency lookups, and passive reconnaissance capabilities through publicly available data sources.
 
-- Discover email addresses related to a domain  
-- Classify first-party vs third-party addresses  
-- Collect data from:
-  - Website crawl  
-  - Certificate Transparency logs  
-  - Optional theHarvester  
-- Produce clean Markdown or JSON reports  
+## Features
 
-The tool is **non-intrusive, passive, safe**, and intended for:
+### DNS Infrastructure Analysis
+- **MX Record Enumeration** - Mail server discovery and configuration analysis
+- **SPF Record Analysis** - Sender Policy Framework validation
+- **DKIM Configuration** - DomainKeys Identified Mail detection
+- **DMARC Policy Review** - Domain-based Message Authentication reporting
 
-- Ethical hacking labs  
-- OSINT workflows  
-- Reconnaissance during authorized penetration tests  
+### Email Validation & Verification
+- **RFC-Compliant Validation** - Syntax and format verification
+- **Confidence Scoring** - High/medium/low confidence ratings based on validation depth
+- **Catch-All Detection** - SMTP-based catch-all server identification
+- **MX Record Verification** - Active mail server validation
 
----
+### Passive Reconnaissance
+- **Certificate Transparency Lookups** - Domain discovery via CT logs (crt.sh)
+- **theHarvester Integration** - Passive email harvesting from multiple public sources
+- **Multi-Source Aggregation** - Consolidated results from various OSINT sources
+
+### Reporting & Output
+- **CSV Export** - Structured data for analysis and tracking
+- **JSON Export** - Machine-readable format for integration
+- **Text Reports** - Human-readable summary outputs
+- **Comprehensive Logging** - Detailed operation tracking
+
+## Installation
+
+\`\`\`bash
+git clone https://github.com/RichardBarron27/redspecter-emailosint.git
+cd redspecter-emailosint
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+\`\`\`
 
 ## Usage
 
-```bash
-redspecter-emailosint [OPTIONS]
+### Full Infrastructure Scan
+\`\`\`bash
+redspecter-emailosint scan -d target.com --json --csv
+\`\`\`
 
--d, --domain <domain>
--m, --mode <safe|normal|aggressive>
---no-ct
---no-crawl
---no-harvester
--o, --output <folder>
--h, --help
+### Individual Commands
+\`\`\`bash
+redspecter-emailosint check-mx -d target.com
+redspecter-emailosint validate -e user@target.com
+redspecter-emailosint ct-lookup -d target.com
+redspecter-emailosint check-catchall -d target.com
+redspecter-emailosint harvest -d target.com
+\`\`\`
 
+## Ethical Use & Legal Compliance
 
-redspecter-emailosint -d example.com
-redspecter-emailosint -d example.com -m safe
-redspecter-emailosint -d example.com --no-ct --no-harvester
+### Authorized Use Only
+This tool is designed for:
+- Authorized penetration testing engagements
+- Defensive security assessments with proper authorization
+- Infrastructure analysis of domains you own or have permission to assess
 
+### Prohibited Uses
+- Unauthorized reconnaissance of third-party domains
+- Spam or unsolicited bulk email campaigns
+- Violation of website terms of service
 
-Roadmap
-v0.1
+**Always obtain explicit written authorization before use.**
 
-✓ CLI skeleton
-✓ Argument parser
-✓ Help menu
-✓ Output structure
-✓ Safety warnings
+## Testing
 
-v0.2
+\`\`\`bash
+pytest
+pytest --cov=redspecter_emailosint --cov-report=html
+\`\`\`
 
-Implement Certificate Transparency lookup
+## Version History
 
-Implement crawler
+### v0.2.0 (January 2026)
+- Complete Python rewrite with modular architecture
+- Added comprehensive DNS analysis (MX, SPF, DKIM, DMARC)
+- Implemented RFC-compliant email validation with confidence scoring
+- Added SMTP-based catch-all detection
+- Integrated Certificate Transparency lookups via crt.sh
+- Added theHarvester wrapper for passive reconnaissance
+- Multi-format output (CSV, JSON, text)
+- 53+ unit tests with pytest
+- Click-based CLI with multiple subcommands
+- Type hints throughout codebase
 
-Implement harvester integration
+## License
 
-Email extraction engine
+MIT License - See LICENSE file for details
 
-v0.3
+## Author
 
-Markdown + JSON report generator
+**Red Specter Security Research**
+- GitHub: [@RichardBarron27](https://github.com/RichardBarron27)
 
-Output formatting polish
+## Disclaimer
 
-Error handling
-
-v1.0
-
-Fully packaged Debian tool
-
-Ready for public release
-
-Potential future submission to Kali Linux
-
-Legal / Ethical Notice
-
-This tool performs passive OSINT only.
-No exploitation, no intrusive scanning.
-
-You must have explicit authorization when conducting security testing.
-The author assumes no liability for misuse.
-
-License
-
-Released under the MIT License.
-
-
+This tool is provided for educational and authorized security assessment purposes only. Users assume all responsibility for lawful and ethical use.
 
 ---
 
-### 🔗 Explore the Red Specter tool suite
-
-- 🗺 **ScriptMap** – Map, group, and document your security/automation scripts in seconds.  
-  https://github.com/RichardBarron27/redspecter-scriptmap
-
-- 🧨 **Red Specter Offensive Framework** – Modular bash framework for recon, web enum, vuln scanning, and more (Kali-friendly).  
-  https://github.com/RichardBarron27/red-specter-offensive-framework
-
-- 📧 **Red Specter Email OSINT** – Email-focused OSINT helper for investigators and defenders.  
-  https://github.com/RichardBarron27/redspecter-emailosint
-
-Follow the Red Specter project for more ethical cybersecurity tools and playbooks.
-
-## ❤️ Support Red Specter
-
-If these tools help you, you can support future development:
-
-- ☕ Buy me a coffee: https://www.buymeacoffee.com/redspecter  
-- 💼 PayPal: https://paypal.me/richardbarron1747  
-
-Notice for Users: If you cloned this and found it useful, please consider starring the repo! Stars help with visibility and let me know which projects to maintain.
+*Built for the cybersecurity community. Use responsibly.*
